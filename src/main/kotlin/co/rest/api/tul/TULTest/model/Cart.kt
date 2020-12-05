@@ -7,7 +7,7 @@ import co.rest.api.tul.TULTest.model.enums.CartStatus
 @Table(name = "carts")
 data class Cart (
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	val id: Long,
 	@Enumerated(EnumType.STRING)
 	var status: CartStatus = CartStatus.PENDING,

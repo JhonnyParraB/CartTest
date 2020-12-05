@@ -20,7 +20,7 @@ class CartController (
 		if(cart == null)
 			return ResponseEntity<Any>(null, HttpStatus.NOT_FOUND)
 		else
-			return ResponseEntity<Any>(cart, HttpStatus.OK);
+			return ResponseEntity<Any>(cart, HttpStatus.OK)
 	}
 	
 	@PostMapping("/cart/{cartId}/checkout")

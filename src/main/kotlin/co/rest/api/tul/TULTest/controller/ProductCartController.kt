@@ -31,7 +31,8 @@ class ProductCartController (
 			return ResponseEntity<Any>(null, HttpStatus.NOT_FOUND)
 		}
 		else{
-			var productCart: ProductCart = ProductCart(0, product, cart, 0)
+			var productCart: ProductCart = ProductCart(0, product, cart)
+			println(productCart.quantity)
 			productCart = productCartRepository.save(productCart)
 			return (ResponseEntity<Any>(productCart, HttpStatus.CREATED))
 		}

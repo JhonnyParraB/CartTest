@@ -6,7 +6,7 @@ import javax.persistence.*
 @Table(name = "products")
 class Product (
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	val id: Long,
 	var nombre: String,
 	var sku: String,

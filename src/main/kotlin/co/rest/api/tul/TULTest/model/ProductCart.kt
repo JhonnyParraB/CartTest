@@ -7,7 +7,7 @@ import javax.persistence.*
 @Table(name = "product_carts")
 data class ProductCart (
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	val id: Long,
 	@ManyToOne
 	var product: Product,
